@@ -28,8 +28,8 @@ struct CreateView: View {
                         Rectangle()
                             .fill(Color.secondary)
                         
-                        if let image = image {
-                            image
+                        if let image = inputImage {
+                            Image(uiImage: image)
                                 .resizable()
                                 .scaledToFit()
                         } else {
@@ -43,10 +43,9 @@ struct CreateView: View {
                     }
                     Section {
                         Button("Save") {
-                            let newContact = Contact(name: name, image: image!)
+                            let newContact = Contact(name: name, image: inputImage!)
                             
                             contacts.items.append(newContact)
-                            print("new length of contacts \(contacts.items.count)")
                             self.presentationMode.wrappedValue.dismiss()
                         }
                     }
@@ -60,7 +59,7 @@ struct CreateView: View {
     
     func loadImage() {
         guard let inputImage = inputImage else { return }
-        image = Image(uiImage: inputImage)
+        self.inputImage = inputImage
     }
 }
 

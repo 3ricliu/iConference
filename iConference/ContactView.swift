@@ -12,7 +12,7 @@ struct ContactView: View {
 
     var body: some View {
         VStack {
-            contact.image
+            Image(uiImage: contact.image)
                 .resizable()
                 .scaledToFit()
         }
@@ -22,7 +22,7 @@ struct ContactView: View {
 
 struct ContactView_Previews: PreviewProvider {
     static var previews: some View {
-        let contact = Contact(name: "Eric", image: Image(systemName: "plus"))
+        let contact = Contact(name: "Eric", image: UIImage(systemName: "plus")!)
         ContactView(contact: contact)
     }
 }

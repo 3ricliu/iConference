@@ -17,10 +17,15 @@ struct ContentView: View {
                 ForEach(self.contacts.items.sorted(), id: \.id) { item in
                     NavigationLink(destination: ContactView(contact: item)) {
                         Text("\(item.name)")
-                        item.image
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 50)
+                        if let uiImage = item.image {
+                            Image(uiImage: uiImage)
+                                .resizable()
+                                .scaledToFit()
+                        } else {
+                            Text("No Image Selected")
+                                .foregroundColor(.white)
+                                .font(.headline)
+                        }
                     }
                 }
             }
@@ -48,7 +53,14 @@ struct ContentView: View {
     }
     
     func saveData() {
-        print("saving data")
+//        do {
+//            let filename = getDocumentsDirectory().appendingPathComponent("SavedContacts")
+//            let data = try JSONEncoder().encode(self.contacts)
+//            try data.write(to: filename, options: [.atomicWrite])
+//        } catch {
+//            print("Unable to save data")
+//        }
+        print("saving")
     }
 }
 
