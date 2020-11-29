@@ -13,6 +13,9 @@
 		07F4388A25735D4C00E4FD2D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07F4388925735D4C00E4FD2D /* Preview Assets.xcassets */; };
 		07F438932573614E00E4FD2D /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F438922573614E00E4FD2D /* ImagePicker.swift */; };
 		07F438972573633600E4FD2D /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F438962573633600E4FD2D /* CreateView.swift */; };
+		07F4389B257371F500E4FD2D /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4389A257371F500E4FD2D /* Contact.swift */; };
+		07F438A2257376CC00E4FD2D /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F438A1257376CC00E4FD2D /* Contacts.swift */; };
+		07F438A525737C3E00E4FD2D /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F438A425737C3E00E4FD2D /* ContactView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		07F4388B25735D4C00E4FD2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07F438922573614E00E4FD2D /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		07F438962573633600E4FD2D /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		07F4389A257371F500E4FD2D /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		07F438A1257376CC00E4FD2D /* Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
+		07F438A425737C3E00E4FD2D /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 			children = (
 				07F4388225735D4B00E4FD2D /* iConferenceApp.swift */,
 				07F4388425735D4B00E4FD2D /* ContentView.swift */,
+				07F438A425737C3E00E4FD2D /* ContactView.swift */,
+				07F438A1257376CC00E4FD2D /* Contacts.swift */,
+				07F4389A257371F500E4FD2D /* Contact.swift */,
 				07F438962573633600E4FD2D /* CreateView.swift */,
 				07F438922573614E00E4FD2D /* ImagePicker.swift */,
 				07F4388625735D4C00E4FD2D /* Assets.xcassets */,
@@ -146,6 +155,9 @@
 			files = (
 				07F438932573614E00E4FD2D /* ImagePicker.swift in Sources */,
 				07F4388525735D4B00E4FD2D /* ContentView.swift in Sources */,
+				07F438A2257376CC00E4FD2D /* Contacts.swift in Sources */,
+				07F4389B257371F500E4FD2D /* Contact.swift in Sources */,
+				07F438A525737C3E00E4FD2D /* ContactView.swift in Sources */,
 				07F438972573633600E4FD2D /* CreateView.swift in Sources */,
 				07F4388325735D4B00E4FD2D /* iConferenceApp.swift in Sources */,
 			);

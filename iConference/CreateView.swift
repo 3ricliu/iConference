@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct CreateView: View {
+    var contacts: Contacts
+    
+    @Environment(\.presentationMode) var presentationMode
+    
     @State private var name = ""
     @State private var image: Image?
     @State private var inputImage: UIImage?
@@ -37,6 +41,15 @@ struct CreateView: View {
                     .onTapGesture {
                         self.showingImagePicker = true
                     }
+                    Section {
+                        Button("Save") {
+                            let newContact = Contact(name: name, image: image!)
+                            
+                            contacts.items.append(newContact)
+                            print("new length of contacts \(contacts.items.count)")
+                            self.presentationMode.wrappedValue.dismiss()
+                        }
+                    }
                 }
             }
         }
@@ -51,8 +64,11 @@ struct CreateView: View {
     }
 }
 
-struct CreateView_Previews: PreviewProvider {
-    static var previews: some View {
-        CreateView()
-    }
-}
+//struct CreateView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        let contact = Contact(name: "eric", image: Image(systemName: "plus"))
+//        var contacts = Contacts()
+//        contacts.items.append(contact)
+//        CreateView(contacts: contacts)
+//    }
+//}
