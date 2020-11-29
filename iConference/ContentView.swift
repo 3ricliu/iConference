@@ -8,9 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showingCreateScreen = false
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List {
+                ForEach(0 ..< 5) {
+                    Text("hello \($0)")
+                }
+            }
+            .navigationTitle("iConference")
+            .navigationBarItems(trailing: Button(action: {
+                self.showingCreateScreen = true
+            }) {
+                Image(systemName: "plus")
+            })
+        }
+        .sheet(isPresented: $showingCreateScreen, onDismiss: saveData) {
+            CreateView()
+        }
+    }
+    
+    func saveData() {
+        print("trying to save")
     }
 }
 
