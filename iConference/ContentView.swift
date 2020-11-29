@@ -53,14 +53,15 @@ struct ContentView: View {
     }
     
     func saveData() {
-//        do {
-//            let filename = getDocumentsDirectory().appendingPathComponent("SavedContacts")
-//            let data = try JSONEncoder().encode(self.contacts)
-//            try data.write(to: filename, options: [.atomicWrite])
-//        } catch {
-//            print("Unable to save data")
-//        }
-        print("saving")
+        do {
+            let filename = getDocumentsDirectory().appendingPathComponent("SavedContacts")
+            let data = try JSONEncoder().encode(self.contacts)
+            print(data)
+            try data.write(to: filename, options: [.atomicWrite])
+        } catch {
+            print("Unable to save data")
+        }
+//        print("saving")
     }
 }
 
