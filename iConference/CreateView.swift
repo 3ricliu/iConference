@@ -16,6 +16,10 @@ struct CreateView: View {
     @State private var image: Image?
     @State private var inputImage: UIImage?
     @State private var showingImagePicker = false
+    
+    var disabledForm: Bool {
+        inputImage == nil
+    }
 
     var body: some View {
         NavigationView {
@@ -49,6 +53,7 @@ struct CreateView: View {
                             self.presentationMode.wrappedValue.dismiss()
                         }
                     }
+                    .disabled(disabledForm)
                 }
             }
         }
